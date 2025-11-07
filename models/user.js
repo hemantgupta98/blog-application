@@ -47,4 +47,9 @@ userSchema.pre("save", function (next) {
   next();
 });
 
+userSchema.static("matchPassword", function (email, password) {
+  const user = this.findOne({ email });
+  if (!user) return false;
+});
+
 module.exports = User;

@@ -25,4 +25,4 @@ router.post("/signin", async (req, res) => {
   const { password, email } = req.body;
 });
 
-userSchema.static.module.exports = router;
+module.exports = router;
