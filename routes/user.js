@@ -23,6 +23,10 @@ router.post("/signup", async (req, res) => {
 
 router.post("/signin", async (req, res) => {
   const { password, email } = req.body;
+  const user = User.matchPassword(email, password);
+
+  console.log("user", user);
+  return res.redirect("/");
 });
 
 module.exports = router;
