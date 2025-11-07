@@ -21,4 +21,8 @@ router.post("/signup", async (req, res) => {
   return res.redirect("/");
 });
 
-module.exports = router;
+router.post("/signin", async (req, res) => {
+  const { password, email } = req.body;
+});
+
+userSchema.static.module.exports = router;
